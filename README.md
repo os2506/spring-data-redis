@@ -1,5 +1,5 @@
 # Spring-data-redis
-Spring starter cache, Spring data redis, redis clients
+Spring starter cache, Spring data redis, jedis
 
 Java 17/ Redis Server 6.2.12
 
