@@ -15,7 +15,6 @@ mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8081
 
 mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8082
 
-App localhost:8081
-App localhost:8082
+App localhost:8081/8082
 connected to the same redis memory,you can test this via postman by sending several add, update or delete 
 requests to see how data-redis sorts the data and dispatches it for different instances. 
