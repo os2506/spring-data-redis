@@ -2,12 +2,13 @@
 Spring starter cache, Spring data redis, redis clients
 Java 17/ Redis Server 6.2.12
 
-We have here two different approach: 
++ We have here two different approach: 
 
 1: using Spring starter cache
+
 2: using Spring data redis for two instance:
 
-now, we can have just one central distribued cache used by of all instances.
+We can have just one central distribued cache used by of all instances.
 
 mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8081
 
