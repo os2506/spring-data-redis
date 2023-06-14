@@ -9,7 +9,7 @@ Java 17/ Redis Server 6.2.12
 
 2: using Spring data redis for two instance:
 
-We can have just one central distribued cache used by of all instances.
+We can have just one central distribued cache used by all of instances.
 
 mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8081
 
