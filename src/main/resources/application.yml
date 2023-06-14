@@ -1,0 +1,5 @@
+spring:
+  cache:
+   redis:
+      time-to-live: 50S
+      type: simple
