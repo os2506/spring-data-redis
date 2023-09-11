@@ -19,7 +19,7 @@ pipeline {
             }
         }
         
-        stage('Test') {
+        stage('Unit Test') {
             steps {
               withMaven(maven : 'apache-maven-3.9.4') {
                 // Run tests
@@ -28,7 +28,7 @@ pipeline {
             }
         }
         
-        stage('integration-test') {
+        stage('Integration Test') {
             steps {
               withMaven(maven : 'apache-maven-3.9.4') {
                 // Run integration tests
@@ -38,7 +38,7 @@ pipeline {
         }
         
         
-        stage('Security') {
+        stage('Security verification') {
             steps {
               withMaven(maven : 'apache-maven-3.9.4') {
                 // Run check security
