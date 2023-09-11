@@ -28,6 +28,26 @@ pipeline {
             }
         }
         
+        stage('integration-test') {
+            steps {
+              withMaven(maven : 'apache-maven-3.9.4') {
+                // Run integration tests
+                bat 'mvn integration-test'
+                }
+            }
+        }
+        
+        
+        stage('Security') {
+            steps {
+              withMaven(maven : 'apache-maven-3.9.4') {
+                // Run check security
+                bat 'mvn dependency-check:check'
+                }
+            }
+        }
+        
+        
     }
     
    
