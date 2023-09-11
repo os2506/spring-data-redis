@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 
 @SpringBootApplication
-@EnableCaching
+//@EnableCaching
 public class SpringBootRedisDemoApplication {
 	
     private static final Logger log = LoggerFactory.getLogger(SpringBootRedisDemoApplication.class);

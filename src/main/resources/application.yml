@@ -1,5 +1,17 @@
-spring:
-  cache:
-   redis:
-      time-to-live: 50S
-      type: simple
+server:
+  port: 8082
+  
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" # Enable all endpoints, or specify the ones you need individually
+  endpoint:
+    health:
+      show-details: "always" # Show detailed health information
+  security:
+    enabled: true # Enable security for Actuator endpoints
+  info:
+    app:
+      name: My Spring Boot App
+      description: My application description

@@ -29,7 +29,7 @@ public class ProductDao {
     }
 
     public void addProducts() {
-        log.debug("Hello Constructor");
+        //log.debug("Hello Constructor");
         String id = createAndGetId();
         productList.put(
                 id,
@@ -43,7 +43,7 @@ public class ProductDao {
                 id,
                 new ProductDto(id, this.prefix + "product3", 3049.99, "product3 description"));
         
-        log.warn("This is a warning that I have added 3 products only...");
+   //     log.warn("This is a warning that I have added 3 products only...");
     }
 
     private String createAndGetId() {
@@ -51,15 +51,15 @@ public class ProductDao {
     }
 
     
-    @Cacheable("products")
+   // @Cacheable("products")
     public List<ProductDto> getProducts() throws InterruptedException {
     	
-        log.info("Calling service to get Products data...");
+  //      log.info("Calling service to get Products data...");
         
         //Sleep one sec for the first simple example spring starter cache
         SECONDS.sleep(1);
         
-        log.debug("This is debug Calling service to get Products data...");
+      //  log.debug("This is debug Calling service to get Products data...");
         
         return new ArrayList<>(productList.values());
     }
@@ -68,7 +68,7 @@ public class ProductDao {
     @CacheEvict(value = "products", allEntries = true)
     public ProductDto addProduct(ProductDto product) {
     	
-        log.info("Calling service to ADD PRODUCTS...");
+     //   log.info("Calling service to ADD PRODUCTS...");
         
         String id = createAndGetId();
         ProductDto productDto =
@@ -80,7 +80,7 @@ public class ProductDao {
     }
 
    // @CachePut(value = "products", key = "#productId")
-    @CacheEvict(value = "products", key ="#productId")
+   // @CacheEvict(value = "products", key ="#productId")
     public ProductDto updateProduct(String productId, ProductDto product) {
         ProductDto productDto =
                 new ProductDto(productId, product.name(), product.price(), product.description());
@@ -88,9 +88,9 @@ public class ProductDao {
         return productDto;
     }
 
-    @Cacheable(value = "products", key = "#productId")
+   // @Cacheable(value = "products", key = "#productId")
     public Optional<ProductDto> getProduct(String productId) {
-        log.info("Finding product: " + productId);
+//        log.info("Finding product: " + productId);
         sleep(2);
         return Optional.ofNullable(productList.get(productId));
     }
