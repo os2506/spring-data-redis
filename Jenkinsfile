@@ -23,21 +23,7 @@ pipeline {
             }
         }
         
-        // Add more stages as needed
-        
-        stage('Deploy') {
-            steps {
-                // Deploy your application (if applicable)
-            }
-        }
     }
     
-    post {
-        success {
-            // Actions to take if the build is successful
-        }
-        failure {
-            // Actions to take if the build fails
-        }
-    }
+   
 }
